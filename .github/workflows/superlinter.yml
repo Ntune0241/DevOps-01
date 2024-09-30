@@ -15,3 +15,13 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LINTER_RULES_PATH: .github/linters  # Points to custom linter rules (if any)
+          VALIDATE_ALL_CODEBASE: true         # Validate entire codebase
+          FILE_EXTENSIONS: |
+            js
+            ts
+            py
+            yml
+          DISABLE_LINTERS: |
+            markdown
+            dockerfile
